@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background: #07071A; }
+  body {
+    @apply bg-base text-text font-sans;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-card rounded-2xl border border-border p-4;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .card-glow {
+    @apply card;
+    border-color: rgba(168,85,247,0.25);
+    box-shadow: 0 0 20px rgba(168,85,247,0.08), inset 0 1px 0 rgba(255,255,255,0.04);
+  }
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold tracking-wide;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-150 active:scale-95;
+  }
+  .btn-primary {
+    @apply btn text-white;
+    background: linear-gradient(135deg, #A855F7, #EC4899);
+    box-shadow: 0 0 20px rgba(168,85,247,0.35);
+  }
+  .btn-primary:hover { box-shadow: 0 0 30px rgba(168,85,247,0.55); }
+  .btn-danger {
+    @apply btn text-white;
+    background: linear-gradient(135deg, #FB7185, #EC4899);
+    box-shadow: 0 0 20px rgba(251,113,133,0.35);
+  }
+  .btn-ghost {
+    @apply btn bg-elevated text-text border border-border;
+  }
+  .btn-ghost:hover { @apply bg-border; }
+
+  .stat-up {
+    @apply font-bold text-ngreen;
+    text-shadow: 0 0 8px rgba(52,211,153,0.5);
+  }
+  .stat-down {
+    @apply font-bold text-nrose;
+    text-shadow: 0 0 8px rgba(251,113,133,0.5);
+  }
+  .neon-purple {
+    @apply text-npurple font-mono font-bold;
+    text-shadow: 0 0 10px rgba(168,85,247,0.6);
+  }
+  .neon-pink {
+    @apply text-nmagenta font-mono font-bold;
+    text-shadow: 0 0 10px rgba(232,121,249,0.6);
+  }
+  .section-label {
+    @apply text-[10px] font-bold tracking-widest uppercase text-muted px-0.5 mb-2;
+  }
+}
